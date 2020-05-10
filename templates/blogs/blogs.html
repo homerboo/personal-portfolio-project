@@ -1,1 +1,31 @@
-<h1>blog page</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static 'css/bootstrap.css' %}> <link
+    rel="stylesheet" href={% static 'css/style.css' %} />
+    <title>Blog</title>
+  </head>
+  <body></body>
+</html>
+
+<!-- This is where to import base.html -->
+
+<div class="container text-center">
+  <h1>Blog</h1>
+  <br />
+  <br />
+  {% for blog in blogs %}
+  <!-- Need to link to a page with full blog post -->
+  <!-- title, dateCreated, content -->
+  <h2><a href=""></a>{{ blog.title }}</h2>
+  <p>{{blog.dateCreated}}</p>
+  <p>
+    {{ blog.content}}
+  </p>
+  <br />
+  <br />
+  {% endfor %}
+</div>
